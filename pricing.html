@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — Pillar of Light</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=roundo@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-wrap">
+<canvas id="bg-canvas"></canvas>
+</div>
+<div class="grain"></div>
+
+<div class="container">
+
+  <nav>
+    <a class="wordmark" href="index.html"><span class="shimmer-text">Pillar of Light</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" id="nav-home"><span class="shimmer-text">Home</span></a></li>
+      <li><a href="story.html" id="nav-story"><span class="shimmer-text">My Story</span></a></li>
+      <li><a href="services.html" id="nav-services"><span class="shimmer-text">Services</span></a></li>
+      <li><a href="what-is-peer-support.html" id="nav-what"><span class="shimmer-text">What is Peer Support?</span></a></li>
+      <li><a href="pricing.html" id="nav-pricing"><span class="shimmer-text">Pricing</span></a></li>
+      <li><a href="blog.html" id="nav-blog"><span class="shimmer-text">Blog</span></a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <p class="page-label">Getting started</p>
+    <h2><span class="shimmer-text">Pricing &amp; Payment</span></h2>
+    <p class="page-intro"><span class="shimmer-text">First session is free. You only pay if you feel helped.</span></p>
+  </div>
+
+  <div class="prose">
+    <div class="pricing-card">
+      <span class="free-badge">First session</span>
+      <p class="price-main"><span class="shimmer-text">Free</span></p>
+      <p class="price-sub">No commitment required</p>
+      <p class="price-note">No obligation. See if this feels right.</p>
+    </div>
+
+    <div class="pricing-card">
+      <p class="price-main"><span class="shimmer-text">$30</span></p>
+      <p class="price-sub">Per session · 1 hour · Pay only if you're happy</p>
+      <p class="price-note">1 hour. Payment via PayPal. You only pay at the end — and only if you felt helped.</p>
+    </div>
+
+    <div class="divider"><div class="divider-line"></div><div class="divider-glyph">✦</div><div class="divider-line"></div></div>
+
+    <h3><span class="shimmer-text">How sessions work</span></h3>
+    <p>Due to my Autism, I reply via text. You can speak by voice, video, or text — whatever suits you. Sessions run via Facebook Messenger.</p>
+
+    <h3><span class="shimmer-text">Cancellation Policy</span></h3>
+    <p>Cancel anytime, at least an hour before. I understand that illness makes things unpredictable. Just give as much notice as you can.</p>
+
+    <h3><span class="shimmer-text">Booking</span></h3>
+    <p>I'm flexible. Most hours work. Click below to book.</p>
+
+    <a class="card book-card"
+      data-cal-link="jarred-mann-3x09o6/1hour"
+      data-cal-namespace="1hour"
+      data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'
+      style="margin: 2rem 0 4rem; text-align:center; cursor:pointer; display:block; text-decoration:none;">
+      <p class="card-title"><span class="shimmer-text">Book a session</span></p>
+      <p class="card-desc">Click to choose a time.</p>
+      <span class="card-arrow">Schedule →</span>
+    </a>
+  </div>
+
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "1hour", {origin:"https://app.cal.com"});
+    Cal.ns["1hour"]("ui", {"theme":"dark","cssVarsPerTheme":{"dark":{"cal-brand":"#a8bfff","cal-brand-emphasis":"#c4d4ff","cal-brand-text":"#0d1530"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+
+  <footer>
+    <span class="footer-name">Pillar of Light &copy; 2026</span>
+  </footer>
+
+</div>
+<script src="components.js"></script>
+</body>
+</html>

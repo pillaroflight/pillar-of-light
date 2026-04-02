@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Pillar of Light</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=roundo@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-wrap">
+<canvas id="bg-canvas"></canvas>
+</div>
+<div class="grain"></div>
+
+<div class="container">
+
+  <nav>
+    <a class="wordmark" href="index.html"><span class="shimmer-text">Pillar of Light</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" id="nav-home"><span class="shimmer-text">Home</span></a></li>
+      <li><a href="story.html" id="nav-story"><span class="shimmer-text">My Story</span></a></li>
+      <li><a href="services.html" id="nav-services"><span class="shimmer-text">Services</span></a></li>
+      <li><a href="what-is-peer-support.html" id="nav-what"><span class="shimmer-text">What is Peer Support?</span></a></li>
+      <li><a href="pricing.html" id="nav-pricing"><span class="shimmer-text">Pricing</span></a></li>
+      <li><a href="blog.html" id="nav-blog"><span class="shimmer-text">Blog</span></a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero blog-index-hero">
+    <h2><span class="shimmer-text">Blog</span></h2>
+  </div>
+
+  <div class="blog-controls">
+    <div style="position:relative; flex:1; min-width:200px;">
+      <input type="text" id="blog-search" placeholder="Search posts or #tag..." autocomplete="off" style="width:100%;">
+      <div id="tag-suggestions" style="display:none; position:absolute; top:100%; left:0; right:0; background:#111e3e; border:0.5px solid rgba(140,160,255,0.2); z-index:10; margin-top:2px;"></div>
+    </div>
+    <select id="blog-sort">
+      <option value="newest">Newest first</option>
+      <option value="oldest">Oldest first</option>
+      <option value="az">A → Z</option>
+      <option value="za">Z → A</option>
+    </select>
+  </div>
+
+  <p id="no-results" style="display:none; color:rgba(238,234,243,0.35); font-size:0.9rem; padding: 2rem 0;">No posts match your search.</p>
+
+  <div class="card-grid" id="blog-grid" style="margin-bottom:6rem;">
+    <a class="card" href="post-1.html" data-title="what makes ips different from therapy — and why that matters" data-desc="intentional peer support takes a fundamentally different approach from traditional therapy." data-tag="peer support|mental health|therapy" data-date="Mar 2025">
+      <p class="post-date" style="margin-bottom:0.5rem;">Mar 2025</p>
+      <p class="card-title"><span class="shimmer-text">What makes IPS different from therapy — and why that matters</span></p>
+      <p class="card-desc">Intentional Peer Support takes a fundamentally different approach from traditional therapy.</p>
+      <span class="card-arrow">Read →</span>
+    
+    <a class="card" href="post-2.html" data-title="on being with someone without trying to fix them" data-desc="one of the hardest things to learn is how to simply be present without reaching for solutions." data-tag="reflection|peer support" data-date="Feb 2025">
+      <p class="post-date" style="margin-bottom:0.5rem;">Feb 2025</p>
+      <p class="card-title"><span class="shimmer-text">On being with someone without trying to fix them</span></p>
+      <p class="card-desc">One of the hardest things to learn is how to simply be present without reaching for solutions.</p>
+      <span class="card-arrow">Read →</span>
+    
+    <a class="card" href="post-3.html" data-title="why i chose to become a peer supporter" data-desc="after 14 years of navigating chronic illness, i found my calling in helping others do the same." data-tag="personal|peer support|chronic illness" data-date="Jan 2025">
+      <p class="post-date" style="margin-bottom:0.5rem;">Jan 2025</p>
+      <p class="card-title"><span class="shimmer-text">Why I chose to become a peer supporter</span></p>
+      <p class="card-desc">After 14 years of navigating chronic illness, I found my calling in helping others do the same.</p>
+      <span class="card-arrow">Read →</span>
+    
+    <a class="card" href="post-4.html" data-title="the lost art of being heard" data-desc="we live in a world that rushes to respond. somewhere in that rush, we forgot how to truly listen." data-tag="reflection|mental health" data-date="Dec 2024">
+      <p class="post-date" style="margin-bottom:0.5rem;">Dec 2024</p>
+      <p class="card-title"><span class="shimmer-text">The lost art of being heard</span></p>
+      <p class="card-desc">We live in a world that rushes to respond. Somewhere in that rush, we forgot how to truly listen.</p>
+      <span class="card-arrow">Read →</span>
+    
+    <a class="card" href="post-5.html" data-title="what chronic illness teaches you about slowing down" data-desc="fourteen years of m.e. has been a brutal teacher. but it has also given me gifts i could not have anticipated." data-tag="chronic illness|personal|reflection" data-date="Nov 2024">
+      <p class="post-date" style="margin-bottom:0.5rem;">Nov 2024</p>
+      <p class="card-title"><span class="shimmer-text">What chronic illness teaches you about slowing down</span></p>
+      <p class="card-desc">Fourteen years of M.E. has been a brutal teacher. But it has also given me gifts I could not have anticipated.</p>
+      <span class="card-arrow">Read →</span>
+    
+    <a class="card" href="post-6.html" data-title="hope is not optimism — and that difference matters" data-desc="optimism says things will be fine. hope says i can move towards something, even without certainty." data-tag="peer support|mental health|reflection" data-date="Oct 2024">
+      <p class="post-date" style="margin-bottom:0.5rem;">Oct 2024</p>
+      <p class="card-title"><span class="shimmer-text">Hope is not optimism — and that difference matters</span></p>
+      <p class="card-desc">Optimism says things will be fine. Hope says I can move towards something, even without certainty.</p>
+      <span class="card-arrow">Read →</span>
+    
+    <a class="card" href="post-7.html" data-title="living with pda: when every task feels like a wall" data-desc="pathological demand avoidance is one of the least understood conditions. this is what it actually feels like." data-tag="chronic illness|autism|personal" data-date="Sep 2024">
+      <p class="post-date" style="margin-bottom:0.5rem;">Sep 2024</p>
+      <p class="card-title"><span class="shimmer-text">Living with PDA: when every task feels like a wall</span></p>
+      <p class="card-desc">Pathological Demand Avoidance is one of the least understood conditions. This is what it actually feels like.</p>
+      <span class="card-arrow">Read →</span>
+    
+    <a class="card" href="post-8.html" data-title="on mutuality — why peer support is not just counselling" data-desc="the give-and-take in peer support is what makes it fundamentally different. and that difference heals." data-tag="peer support|mental health" data-date="Aug 2024">
+      <p class="post-date" style="margin-bottom:0.5rem;">Aug 2024</p>
+      <p class="card-title"><span class="shimmer-text">On mutuality — why peer support is not just counselling</span></p>
+      <p class="card-desc">The give-and-take in peer support is what makes it fundamentally different. And that difference heals.</p>
+      <span class="card-arrow">Read →</span>
+    
+    <a class="card" href="post-9.html" data-title="finding meaning in suffering without toxic positivity" data-desc="there's a difference between finding meaning and being told to look on the bright side. one helps. one doesn't." data-tag="reflection|mental health|chronic illness" data-date="Jul 2024">
+      <p class="post-date" style="margin-bottom:0.5rem;">Jul 2024</p>
+      <p class="card-title"><span class="shimmer-text">Finding meaning in suffering without toxic positivity</span></p>
+      <p class="card-desc">There's a difference between finding meaning and being told to look on the bright side. One helps. One doesn't.</p>
+      <span class="card-arrow">Read →</span>
+    
+    <a class="card" href="post-10.html" data-title="how i rebuilt my relationship with my family — and what i learned" data-desc="years of misunderstanding, pain, and distance. here is what changed everything." data-tag="personal|reflection|autism" data-date="Jun 2024">
+      <p class="post-date" style="margin-bottom:0.5rem;">Jun 2024</p>
+      <p class="card-title"><span class="shimmer-text">How I rebuilt my relationship with my family — and what I learned</span></p>
+      <p class="card-desc">Years of misunderstanding, pain, and distance. Here is what changed everything.</p>
+      <span class="card-arrow">Read →</span>
+    
+    <a class="card" href="post-11.html" data-title="validation is not agreement — it is recognition" data-desc="when someone feels validated, they don't feel told they're right. they feel seen. that's a crucial distinction." data-tag="peer support|mental health" data-date="May 2024">
+      <p class="post-date" style="margin-bottom:0.5rem;">May 2024</p>
+      <p class="card-title"><span class="shimmer-text">Validation is not agreement — it is recognition</span></p>
+      <p class="card-desc">When someone feels validated, they don't feel told they're right. They feel seen. That's a crucial distinction.</p>
+      <span class="card-arrow">Read →</span>
+    
+  </div>
+
+  <script>
+    const grid = document.getElementById('blog-grid');
+    const search = document.getElementById('blog-search');
+    const sort = document.getElementById('blog-sort');
+    const noResults = document.getElementById('no-results');
+    const tagSuggestions = document.getElementById('tag-suggestions');
+
+    const monthOrder = {'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12};
+
+    // Collect all unique tags
+    const allTags = [...new Set(
+      Array.from(grid.querySelectorAll('.card'))
+        .flatMap(c => (c.dataset.tag || '').split('|').map(t => t.trim()))
+        .filter(Boolean)
+    )].sort();
+
+    function parseDate(str) {
+      const [mon, yr] = str.split(' ');
+      return parseInt(yr) * 100 + (monthOrder[mon] || 0);
+    }
+
+    function update() {
+      const q = search.value.toLowerCase().trim();
+      const cards = Array.from(grid.querySelectorAll('.card'));
+
+      let visible = cards.filter(c => {
+        if (!q) return true;
+        const t = c.dataset.title || '';
+        const d = c.dataset.desc || '';
+        const tags = (c.dataset.tag || '').toLowerCase().split('|');
+        const raw = q.startsWith('#') ? q.slice(1) : q;
+        if (q.startsWith('#')) return tags.some(tag => tag.includes(raw));
+        return t.includes(q) || d.includes(q) || tags.some(tag => tag.includes(q));
+      });
+
+      const s = sort.value;
+      visible.sort((a, b) => {
+        if (s === 'newest') return parseDate(b.dataset.date) - parseDate(a.dataset.date);
+        if (s === 'oldest') return parseDate(a.dataset.date) - parseDate(b.dataset.date);
+        if (s === 'az') return (a.dataset.title||'').localeCompare(b.dataset.title||'');
+        if (s === 'za') return (b.dataset.title||'').localeCompare(a.dataset.title||'');
+        return 0;
+      });
+
+      cards.forEach(c => c.style.display = 'none');
+      visible.forEach(c => { c.style.display = ''; grid.appendChild(c); });
+      noResults.style.display = visible.length === 0 ? 'block' : 'none';
+    }
+
+    function showSuggestions() {
+      const q = search.value.toLowerCase().trim();
+      const raw = q.startsWith('#') ? q.slice(1) : q;
+      // Show all tags when just # is typed, or filter by what follows #
+      const matches = q === '#'
+        ? allTags
+        : allTags.filter(t => t.toLowerCase().includes(raw) && raw.length > 0);
+
+      if (matches.length === 0 || q.length === 0) {
+        tagSuggestions.style.display = 'none';
+        return;
+      }
+
+      tagSuggestions.innerHTML = matches.map(t =>
+        `<div class="tag-suggestion" onclick="selectTag('${t}')">#${t}</div>`
+      ).join('');
+      tagSuggestions.style.display = 'block';
+    }
+
+    function selectTag(tag) {
+      search.value = '#' + tag;
+      tagSuggestions.style.display = 'none';
+      update();
+    }
+
+    // Clicking a tag pill on a card filters by that tag
+    grid.addEventListener('click', function(e) {
+      const pill = e.target.closest('.blog-tag');
+      if (pill) {
+        e.preventDefault();
+        selectTag(pill.dataset.tagValue);
+        e.stopPropagation();
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.blog-controls')) tagSuggestions.style.display = 'none';
+    });
+
+    search.addEventListener('input', () => { update(); showSuggestions(); });
+    sort.addEventListener('change', update);
+  </script>
+
+  <footer>
+    <span class="footer-name">Pillar of Light &copy; 2026</span>
+  </footer>
+
+</div>
+<script src="components.js"></script>
+</body>
+</html>
